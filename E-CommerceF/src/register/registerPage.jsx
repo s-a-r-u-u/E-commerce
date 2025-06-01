@@ -19,7 +19,7 @@ export default function Register() {
 
       async function register(event){
           event.preventDefault();
-          let user = await axios.post("http://13.232.155.198/:3000/app/v1/user/register", {
+          let user = await axios.post("http://13.232.155.198:3000/app/v1/user/register", {
             username:username, 
             password:password
           })
