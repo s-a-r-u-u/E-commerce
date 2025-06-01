@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.static(buildpath));
 
 app.use(cors({
-    origin:"*",
+    origin:"http://13.232.155.198:3000",
 }));
 // routes 
 app.use("/app/v1/user",UserRoutes);
