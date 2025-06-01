@@ -14,7 +14,7 @@ const navigate = useNavigate();
   let[products,setProducts] = useState();
   useEffect(()=>{
     async function getItem(){
-       const prod = await axios.get("http://localhost:3000/app/v1/items/get");
+       const prod = await axios.get("http://13.232.155.198:3000/app/v1/items/get");
        setProducts(prod.data.data);
       
     }
@@ -29,9 +29,9 @@ const navigate = useNavigate();
          console.log(products);
     return async function (event){  
         event.preventDefault();
-    let userA = await axios.post('http://localhost:3000/app/v1/user/author' , {} , {headers:{Authorization:`bearer ${location.state}`}})
+    let userA = await axios.post('http://13.232.155.198:3000/app/v1/user/author' , {} , {headers:{Authorization:`bearer ${location.state}`}})
     if(userA.data.status){
-      let payment = await axios.post("http://localhost:3000/app/v1/checkout",{
+      let payment = await axios.post("http://13.232.155.198:3000/app/v1/checkout",{
         item:description[0],
         price:description[1],
         image:description[2]

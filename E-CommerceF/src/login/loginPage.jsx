@@ -17,7 +17,7 @@ export default function Login() {
 
     async function login(event){
         event.preventDefault();
-        let Vuser = await axios.post("http://localhost:3000/app/v1/user/login" , {
+        let Vuser = await axios.post("http://13.232.155.198:3000/app/v1/user/login" , {
           username:username,
           password:password
         })
