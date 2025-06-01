@@ -9,10 +9,12 @@ let UserRoutes = require("./routes/userRoutes")
 let paymentRoutes = require("./routes/paymentRoutes")
 // middleware 
 app.use(express.json())
+
+app.use(express.static(buildpath));
+
 app.use(cors({
     origin:"*",
 }));
-app.use(express.static(buildpath));
 // routes 
 app.use("/app/v1/user",UserRoutes);
 app.use("/app/v1/items",itemRoutes);
