@@ -3,7 +3,6 @@ let app = express();
 let cors = require('cors');
 const path = require("path");
 const _dirname= path.dirname("");
-console.log(_dirname);
 const buildpath = path.join(_dirname,"../E-commerceF/dist");
 let itemRoutes =require("./routes/itemsRoutes")
 let UserRoutes = require("./routes/userRoutes")
