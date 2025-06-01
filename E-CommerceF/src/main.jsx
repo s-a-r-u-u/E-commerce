@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {RouterProvider,createBrowserRouter} from "react-router-dom"
+import {RouterProvider,createBrowserRouter,Navigate} from "react-router-dom"
 import Login from './login/loginPage'
 import Register from './register/registerPage'
 import Webpage from './webPage/webpage'
 // import Items  from './itemsCheck/item'
-const router = createBrowserRouter([{
+
+const router = createBrowserRouter([{path:"/",element:<Navigate to = "/Login"/>},{
   path:"/Login",
   Component:Login
 },{
